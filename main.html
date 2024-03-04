@@ -1,1 +1,52 @@
+<html>
+    <body>
+        <script>
+    // assign voor het vragen
+    var amount;
+    var max;
+
+    // vragen voor hoeveel willekeurige getallen en vragen voor de maximum.
+    window.alert("hoeveel willekeurige getallen wil je");
+    amount = Number(window.prompt('Enter a value for amount'));
+    window.alert("hoe hoog wilt u dat de maximale nummer is");
+    max = Number(window.prompt('Enter a value for max'));
+    max = max + 1;
+
+    // assign voor willekeurige getallen genereren
+    var rand = new Array(amount);
+    var n;
+
+    // willekeurige getallen genereren
+    for (n = 0; n <= amount - 1; n++) {
+        rand[n] = Math.floor(Math.random() * max);
+    }
+
+    // assign voor insurt sort
+    // assign voor linear search
+    var search;
+
+    // loop waar je niet uit kant
+    done = 0;
+    while (done == 0) {
+        x = 0;
+
+        // vrage voor linear search
+        window.alert("welk cijfer wil je zoeken");
+        search = Number(window.prompt('Enter a value for search'));
+
+        // linear search
+        for (n = 0; n <= amount - 1; n++) {
+            if (rand[n] == search) {
+                x = x + 1;
+            }
+        }
+        if (x == 0) {
+            window.alert("je cijfer zit er niet in");
+        } else {
+            window.alert("je cijfer zit er " + x + " keer er in");
+        }
+    }
+</script>
+</body>
+</html>
 
